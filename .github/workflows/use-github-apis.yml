@@ -26,12 +26,13 @@ jobs:
 
             console.log(issue)
 
-            await wait(10)
+            sleep(10)
 
             const result = await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: issue.number
+              issue_number: issue.number,
+              state: 'closed'
             })
             
             console.log(result)
