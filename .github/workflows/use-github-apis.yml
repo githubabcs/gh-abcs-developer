@@ -1,6 +1,7 @@
 name: 05-1. Use GitHub APIs
 on: 
   workflow_dispatch:
+  push:
 
 # Limit the permissions of the GITHUB_TOKEN
 permissions:
@@ -26,7 +27,7 @@ jobs:
             const result = await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: issue.id
+              issue_number: issue.number
             })
 
             console.log(issue)
