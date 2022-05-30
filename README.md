@@ -47,9 +47,9 @@
 
 ### Developer Changelog
 - [GitHub Changelog](https://github.blog/changelog/)
-- [repos Archives | The GitHub Blog](https://github.blog/changelog/label/repos/)
-- [branches Archives | The GitHub Blog](https://github.blog/changelog/label/branches/)
-- [pull-requests Archives | The GitHub Blog](https://github.blog/changelog/label/pull-requests/)
+- [repos Archives - The GitHub Blog](https://github.blog/changelog/label/repos/)
+- [branches Archives - The GitHub Blog](https://github.blog/changelog/label/branches/)
+- [pull-requests Archives - The GitHub Blog](https://github.blog/changelog/label/pull-requests/)
 
 ### Videos
 - [GitHub Training & Guides - YouTube](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw)
