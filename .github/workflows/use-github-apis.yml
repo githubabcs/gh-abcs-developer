@@ -64,32 +64,8 @@ jobs:
       - name: Displays training issues
         run: echo "${{toJSON(steps.issues-result.outputs.result)}}"
 
-  graphql-api-labels:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/github-script@v6
-        id: labels-result
-        with:
-          script: |
-            const query = `query($owner:String!, $name:String!) {
-              repository(owner:$owner, name:$name){
-                labels (last:100) {
-                  nodes {
-                    name,
-                    color,
-                    issues(last:100) {
-                      nodes {
-                        number
-                      }
-                    }
-                  }
-                }
-              }
-            }`;
-            const variables = {
-              owner: context.repo.owner,
-              name: context.repo.repo
-            }
-            const result = await github.graphql(query, variables)
-            console.log(result.repository.labels.nodes)
+  
+  # Add here the labels query step
+
+
             
