@@ -29,13 +29,15 @@ jobs:
 
       - uses: actions/github-script@v6
         id: close-issue
+        env:
+          ISSUE_NUMBER: ${{steps.create-issue.outputs.result.data.number}}
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const result = await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: ${{steps.create-issue.outputs.result.data.number}},
+              issue_number: ${ISSUE_NUMBER},
               state: 'closed'
             })            
             console.log(result)
