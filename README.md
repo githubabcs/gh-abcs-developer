@@ -45,6 +45,12 @@
 - [GitHub REST API - GitHub Docs](https://docs.github.com/en/rest)
 - [Migrating from REST to GraphQL - GitHub Docs](https://docs.github.com/en/graphql/guides/migrating-from-rest-to-graphql)
 
+### Developer Changelog
+- [GitHub Changelog](https://github.blog/changelog/)
+- [repos Archives | The GitHub Blog](https://github.blog/changelog/label/repos/)
+- [branches Archives | The GitHub Blog](https://github.blog/changelog/label/branches/)
+- [pull-requests Archives | The GitHub Blog](https://github.blog/changelog/label/pull-requests/)
+
 ### Videos
 - [GitHub Training & Guides - YouTube](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw)
 
