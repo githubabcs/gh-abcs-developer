@@ -35,7 +35,7 @@ jobs:
             const result = await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: steps.create-issue.outputs.result.data.number,
+              issue_number: ${{steps.create-issue.outputs.result.data.number}},
               state: 'closed'
             })            
             console.log(result)
