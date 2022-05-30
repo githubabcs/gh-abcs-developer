@@ -77,7 +77,7 @@ jobs:
                   nodes {
                     name,
                     color,
-                    issues {
+                    issues(last:100) {
                       nodes {
                         number
                       }
