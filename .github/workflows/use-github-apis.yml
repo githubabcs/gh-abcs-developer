@@ -24,13 +24,16 @@ jobs:
               labels: ["training"]
             })
 
+            console.log(issue)
+
+            await wait(10)
+
             const result = await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number
             })
-
-            console.log(issue)
+            
             console.log(result)
 
   graphql-api-query-issues:
