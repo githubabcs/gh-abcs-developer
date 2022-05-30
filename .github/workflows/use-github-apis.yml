@@ -30,7 +30,7 @@ jobs:
       - uses: actions/github-script@v6
         id: close-issue
         env:
-          ISSUE_NUMBER: ${{steps.create-issue.outputs.result.data.number}}
+          ISSUE_NUMBER: ${{fromJSON(steps.create-issue.outputs.result.data.number)}}
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
