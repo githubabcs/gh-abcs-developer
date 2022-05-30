@@ -15,13 +15,22 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.issues.create({
+            const issue = await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: 'Issue auto-created from workflow run ${{github.run_id}}',
               body: '👋 Thank you! We appreciate your contribution to this project.',
               labels: ["training"]
             })
+
+            const result = await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.id
+            })
+
+            console.log(issue)
+            console.log(result)
 
   graphql-api-query-issues:
     runs-on: ubuntu-latest
@@ -35,6 +44,7 @@ jobs:
                 issues(first:100, labels: [$label]) {
                   nodes {
                     id,
+                    number,
                     title
                   }
                 }
