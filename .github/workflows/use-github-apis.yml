@@ -9,31 +9,39 @@ permissions:
   issues: write
 
 jobs:
-  rest-api-create-issue:
+  rest-api-create-and-close-issue:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
+        id: create-issue
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const issue = await github.rest.issues.create({
+            const result = await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: 'Issue auto-created from workflow run ${{github.run_id}}',
               body: '👋 Thank you! We appreciate your contribution to this project.',
               labels: ["training"]
             })
-            console.log(issue)
+            console.log(result)
+            return result
 
+      - uses: actions/github-script@v6
+        id: close-issue
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
             const result = await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: issue.data.number,
+              issue_number: steps.create-issue.outputs.result.data.number,
               state: 'closed'
             })            
             console.log(result)
 
   graphql-api-query-issues:
+    needs: rest-api-create-issue
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
@@ -44,7 +52,6 @@ jobs:
               repository(owner:$owner, name:$name){
                 issues(first:100, labels: [$label]) {
                   nodes {
-                    id,
                     number,
                     title
                   }
