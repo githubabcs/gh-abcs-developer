@@ -25,10 +25,10 @@ jobs:
               labels: ["training"]
             })
             console.log(result)
-            return result
+            return result.data
 
       - name: Displays create issue result
-        run: echo "${{steps.create-issue.outputs.result}}"
+        run: echo "${{toJSON(steps.create-issue.outputs.result)}}"
 
       - uses: actions/github-script@v6
         id: close-issue
@@ -38,7 +38,7 @@ jobs:
             const result = await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: ${{steps.create-issue.outputs.result}},
+              issue_number: ${{steps.create-issue.outputs.result.number}},
               state: 'closed'
             })            
             console.log(result)
