@@ -18,7 +18,7 @@ jobs:
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Issue auto-created from workflow run ${{job.id}}',
+              title: 'Issue auto-created from workflow run ${{github.run_id}}',
               body: '👋 Thank you! We appreciate your contribution to this project.',
               labels: ["training"]
             })
@@ -27,6 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
+        id: issues-result
         with:
           script: |
             const query = `query($owner:String!, $name:String!, $label:String!) {
@@ -45,4 +46,8 @@ jobs:
               label: 'training'
             }
             const result = await github.graphql(query, variables)
-            console.log(result)
+            console.log(result.repository.issues.nodes)
+            return result
+      
+      - name: Displays training issues
+        run: echo "${{toJSON(steps.issues-result.outputs.result)}}"
