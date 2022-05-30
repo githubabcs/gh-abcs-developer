@@ -9,6 +9,7 @@ permissions:
   issues: write
 
 jobs:
+
   rest-api-create-and-close-issue:
     runs-on: ubuntu-latest
     steps:
@@ -30,18 +31,8 @@ jobs:
       - name: Displays create issue result
         run: echo "${{toJSON(steps.create-issue.outputs.result)}}"
 
-      - uses: actions/github-script@v6
-        id: close-issue
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const result = await github.rest.issues.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: ${{fromJSON(steps.create-issue.outputs.result).number}},
-              state: 'closed'
-            })            
-            console.log(result)
+      # Add here the close-issue step
+
 
   graphql-api-query-issues:
     needs: rest-api-create-and-close-issue
@@ -72,3 +63,29 @@ jobs:
       
       - name: Displays training issues
         run: echo "${{toJSON(steps.issues-result.outputs.result)}}"
+
+  graphql-api-query-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        id: history-result
+        with:
+          script: |
+            const query = `query($owner:String!, $name:String!) {
+              repository(owner:$owner, name:$name){
+                commitComments(last:100) {
+                  nodes {
+                    author,
+                    body,
+                    resourcePath
+                  }
+                }
+              }
+            }`;
+            const variables = {
+              owner: context.repo.owner,
+              name: context.repo.repo
+            }
+            const result = await github.graphql(query, variables)
+            console.log(result)
+            
