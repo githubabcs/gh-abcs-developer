@@ -1,5 +1,5 @@
 # 4 - GitHub Apps
-In this lab you will 
+In this lab you will develop a GitHub App using the Probot framework.
 > Duration: 15-20 minutes
 
 References:
@@ -15,3 +15,4 @@ References:
 1. Follow the guide [Probot - Developing an app](https://probot.github.io/docs/development/) to develop your first GitHub App.
 2. Choose the `basic-js` template and follow the steps to generate, run, configure, and install your GitHub App.
 3. Once installed on your repository, use `npm start` to start your application and listen to webhook events.
+4. Test your application

@@ -1,4 +1,4 @@
-# 3 - Managing a branch protection rule
+# 3 - Repository Branch Protection Rules
 In this lab you will create a branch protection rule to enforce certain workflows for one or more branches
 > Duration: 5-10 minutes
 

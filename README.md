@@ -12,11 +12,14 @@
 ### Module 2: GitHub Templates
 - [ ]  _Hands-on Lab:_ > [Activity 2](/labs/lab02.md)
 
-### Module 3: Managing a branch protection rule
+### Module 3: Repository Branch Protection Rules
 - [ ]  _Hands-on Lab:_ > [Activity 3](/labs/lab03.md)
 
 ### Module 4: GitHub Apps
 - [ ]  _Hands-on Lab:_ > [Activity 4](/labs/lab04.md)
+
+### Module 5: GitHub API
+- [ ]  _Hands-on Lab:_ > [Activity 5](/labs/lab05.md)
 
 ---
 
@@ -38,6 +41,9 @@
 - [GitHub Developer](https://github.com/github-developer)
 - [GitHub Apps - Probot](https://probot.github.io/docs/)
 - [Libraries - GitHub Docs](https://docs.github.com/en/rest/overview/libraries)
+- [GitHub GraphQL API - GitHub Docs](https://docs.github.com/en/graphql)
+- [GitHub REST API - GitHub Docs](https://docs.github.com/en/rest)
+- [Migrating from REST to GraphQL - GitHub Docs](https://docs.github.com/en/graphql/guides/migrating-from-rest-to-graphql)
 
 ### Videos
 - [GitHub Training & Guides - YouTube](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw)
