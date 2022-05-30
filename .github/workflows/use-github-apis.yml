@@ -64,22 +64,24 @@ jobs:
       - name: Displays training issues
         run: echo "${{toJSON(steps.issues-result.outputs.result)}}"
 
-  graphql-api-query-history:
+  graphql-api-labels:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
-        id: history-result
+        id: labels-result
         with:
           script: |
             const query = `query($owner:String!, $name:String!) {
               repository(owner:$owner, name:$name){
-                commitComments(last:100) {
+                labels (last:100) {
                   nodes {
-                    author {
-                      login
-                    },
-                    body,
-                    resourcePath
+                    name,
+                    color,
+                    issues {
+                      nodes {
+                        number
+                      }
+                    }
                   }
                 }
               }
