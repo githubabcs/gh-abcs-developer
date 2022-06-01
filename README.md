@@ -67,3 +67,9 @@
 - [Probot App or GitHub Action? (Updated) - Jason Etcovitch](https://jasonet.co/posts/probot-app-or-github-action-v2/)
 - [GitHub Apps - How to avoid leaking your customer’s source code with GitHub apps - Roadie](https://roadie.io/blog/avoid-leaking-github-org-data/)
 - [GitHub Tokens explained (devopsjournal.io)](https://devopsjournal.io/blog/2022/01/03/GitHub-Tokens)
+
+### InnerSource
+- [Manage an InnerSource program by using GitHub - Learn - Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/manage-innersource-program-github/)
+- [An introduction to innersource - GitHub Resources](https://resources.github.com/innersource/fundamentals/)
+- [InnerSource fundamentals - GitHub Learning Lab](https://lab.github.com/githubtraining/innersource-fundamentals)
+- [InnerSource: theory to practice - GitHub Learning Lab](https://lab.github.com/githubtraining/innersource:-theory-to-practice)
