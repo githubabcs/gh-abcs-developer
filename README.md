@@ -21,6 +21,9 @@
 ### Module 5: GitHub API
 - [ ]  _Hands-on Lab:_ > [Activity 5](/labs/lab05.md)
 
+### Module 6: Automate GitHub Releases
+- [ ]  _Hands-on Lab:_ > [Activity 6](/labs/lab06.md)
+
 ---
 
 ## Additional Resources
