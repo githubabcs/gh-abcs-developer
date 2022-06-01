@@ -21,6 +21,7 @@ on:
     branches:
       - main
 
+# Comment out the 2 lines if the permissions for the GITHUB_TOKEN is read and write and you get an workflow runtime error
 permissions:
   contents: write
 
