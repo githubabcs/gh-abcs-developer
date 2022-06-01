@@ -15,4 +15,14 @@ References:
 1. Follow the guide [Probot - Developing an app](https://probot.github.io/docs/development/) to develop your first GitHub App.
 2. Choose the `basic-js` template and follow the steps to generate, run, configure, and install your GitHub App.
 3. Once installed on your repository, use `npm start` to start your application and listen to webhook events.
-4. Test your application
+4. Test your application by creating a new issue on the installed repository
+5. Update the `index.js` file to add the following listener:
+```javascript
+  app.onAny(async (context) => {
+    app.log.info({ event: context.name, action: context.payload.action });
+  });
+```
+6. Run the application `npm start`
+7. Navigate to your repository where the application is installed
+8. Add a new label to an existing issue, push new code or update the repository settings
+9. Watch the application logs for triggered events
