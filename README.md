@@ -30,7 +30,8 @@
 > Additional resources to continue your GitHub Developer learning journey.
 
 ### Learning GitHub for Developers
-- [Learning Lab](https://lab.github.com/)
+- [GitHub Skills](https://skills.github.com/)
+- [GitHub on Microsoft Learn - Microsoft Learn](https://learn.microsoft.com/en-us/training/github/)
 - [Microsoft Docs - Manage source control](https://docs.microsoft.com/en-us/learn/paths/az-400-manage-source-control/)
 - [Microsoft Docs - Manage the lifecycle of your projects on GitHub](https://docs.microsoft.com/en-us/learn/paths/manage-project-lifecycle-github/)
 
@@ -54,9 +55,6 @@
 - [branches Archives - The GitHub Blog](https://github.blog/changelog/label/branches/)
 - [pull-requests Archives - The GitHub Blog](https://github.blog/changelog/label/pull-requests/)
 
-### Videos
-- [GitHub Training & Guides - YouTube](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw)
-
 ### Articles & Guides
 - [GitHub Training Manual](https://githubtraining.github.io/training-manual/#/01_getting_ready_for_class)
 - [GitHub Workflow Guide](https://github.github.com/services-workflow-guide/#/)
@@ -67,9 +65,8 @@
 - [Probot App or GitHub Action? (Updated) - Jason Etcovitch](https://jasonet.co/posts/probot-app-or-github-action-v2/)
 - [GitHub Apps - How to avoid leaking your customer’s source code with GitHub apps - Roadie](https://roadie.io/blog/avoid-leaking-github-org-data/)
 - [GitHub Tokens explained (devopsjournal.io)](https://devopsjournal.io/blog/2022/01/03/GitHub-Tokens)
+- [Repository Rules are generally available](https://github.blog/changelog/2023-07-24-repository-rules-are-generally-available/)
 
 ### InnerSource
 - [Manage an InnerSource program by using GitHub - Learn - Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/manage-innersource-program-github/)
 - [An introduction to innersource - GitHub Resources](https://resources.github.com/innersource/fundamentals/)
-- [InnerSource fundamentals - GitHub Learning Lab](https://lab.github.com/githubtraining/innersource-fundamentals)
-- [InnerSource: theory to practice - GitHub Learning Lab](https://lab.github.com/githubtraining/innersource:-theory-to-practice)
